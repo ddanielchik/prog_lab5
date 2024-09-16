@@ -1,0 +1,19 @@
+{
+  "id":1,
+  "name":"123",
+  "coordinates": {
+    "x":123.0,
+    "y":123
+  },
+  "creationDate":"2024-09-07T19:49:58.761264+03:00",
+  "health":123,
+  "category":"TACTICAL",
+  "weapon type":"BOLTGUN",
+  "melee weapon":"CHAIN_SWORD",
+  "chapter":{
+    "name":"name",
+    "parentLegion":"123",
+    "marinesCount":123,
+    "world":"123"
+  }
+}
