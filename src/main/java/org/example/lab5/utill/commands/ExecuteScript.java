@@ -1,6 +1,5 @@
 package org.example.lab5.utill.commands;
 
-
 import org.example.lab5.data.*;
 import org.example.lab5.data.builder.ChapterBuild;
 import org.example.lab5.data.builder.CoordinatesBuild;
@@ -11,6 +10,10 @@ import org.example.lab5.utill.managers.FileManager;
 
 import java.io.*;
 
+/**
+ * Класс, представляющий команду для выполнения скрипта из указанного файла.
+ * Наследуется от абстрактного класса AbstrctCommand.
+ */
 public class ExecuteScript extends AbstrctCommand {
 
     private CollectionManager collectionManager;
@@ -18,6 +21,13 @@ public class ExecuteScript extends AbstrctCommand {
     private CommandManager commandManager;
     private ConsoleInput input;
 
+    /**
+     * Конструктор класса ExecuteScript.
+     *
+     * @param input объект для ввода данных с консоли
+     * @param commandManager менеджер команд
+     * @param collectionManager менеджер коллекции
+     */
     public ExecuteScript(ConsoleInput input, CommandManager commandManager, CollectionManager collectionManager) {
         super("execute_script", " считать и исполнить скрипт из указанного файла ");
         this.commandManager = commandManager;
@@ -25,6 +35,10 @@ public class ExecuteScript extends AbstrctCommand {
         this.collectionManager = collectionManager;
     }
 
+    /**
+     * Выполняет скрипт из указанного файла.
+     * Считывает команды из файла и выполняет их.
+     */
     @Override
     public void execute() {
         String path = input.next(); // Получаем путь к файлу от пользователя
@@ -52,6 +66,13 @@ public class ExecuteScript extends AbstrctCommand {
         }
     }
 
+    /**
+     * Парсит данные для создания объекта SpaceMarine из BufferedReader.
+     *
+     * @param reader BufferedReader для чтения данных
+     * @return созданный объект SpaceMarine или null, если произошла ошибка
+     * @throws IOException если произошла ошибка чтения
+     */
     private SpaceMarine parseSpaceMarine(BufferedReader reader) throws IOException {
         String name = null;
         Coordinates coordinates = null;
