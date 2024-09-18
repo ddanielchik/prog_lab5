@@ -63,7 +63,7 @@ public class ChapterBuild extends Build<Chapter> {
      *
      * @return введенное количество морских пехотинцев
      */
-    public Long inputMarinesCount() {
+    public long inputMarinesCount() {
         while (true) {
             System.out.println("input count marines: ");
             try {

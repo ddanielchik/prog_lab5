@@ -24,13 +24,14 @@ public class FileManager {
      *
      * @param collectionManager менеджер коллекции
      */
-    public FileManager(CollectionManager collectionManager) {
+    public FileManager(String path,CollectionManager collectionManager) {
         // переменная окружения for work in term
-        this.path = System.getenv("path");
+        this.path = path;
         this.collectionManager = collectionManager;
         this.file = new File(path);
         // this.collectionManager.addElement(findFile());
     }
+
 
     /**
      * Устанавливает путь к файлу.

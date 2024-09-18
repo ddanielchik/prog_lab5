@@ -17,7 +17,6 @@ import java.io.*;
 public class ExecuteScript extends AbstrctCommand {
 
     private CollectionManager collectionManager;
-    private FileManager fileManager = new FileManager(collectionManager);
     private CommandManager commandManager;
     private ConsoleInput input;
 
